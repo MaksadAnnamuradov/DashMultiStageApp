@@ -1,5 +1,5 @@
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
@@ -15,7 +15,7 @@ DATA_PATH = PATH.joinpath("../datasets").resolve()
 dfg = pd.read_csv(DATA_PATH.joinpath("opsales.csv"))
 
 layout = html.Div([
-    html.H1('General Product Sales', style={"textAlign": "center"}),
+    html.H1('General Product Sales in $', style={"textAlign": "center"}),
 
     html.Div([
         html.Div([
