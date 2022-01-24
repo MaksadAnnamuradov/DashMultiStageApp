@@ -7,7 +7,7 @@ from app import app
 from app import server
 
 # Connect to your app pages
-from apps import vgames, global_sales, animal_calls, restaurant_inspections, country_population
+from apps import vgames, global_sales, animal_calls, country_population
 
 
 app.layout = html.Div([
