@@ -16,7 +16,7 @@ app.layout = html.Div([
         dcc.Link('Video Games| ', href='/apps/vgames'),
         dcc.Link('Other Products| ', href='/apps/global_sales'),
         dcc.Link('Animal Calls| ', href='/apps/animal_calls'),
-        dcc.Link('Restaurant Inspections| ', href='/apps/restaurant_inspections'),
+        #dcc.Link('Restaurant Inspections| ', href='/apps/restaurant_inspections'),
         dcc.Link('Country Population', href='/apps/country_population'),
     ], className="row"),
     html.Div(id='page-content', children=[])
@@ -32,8 +32,8 @@ def display_page(pathname):
         return global_sales.layout
     if pathname == '/apps/animal_calls':
         return animal_calls.layout
-    if pathname == '/apps/restaurant_inspections':
-        return restaurant_inspections.layout
+    # if pathname == '/apps/restaurant_inspections':
+    #     return restaurant_inspections.layout
     if pathname == '/apps/country_population':
         return country_population.layout
     else:
