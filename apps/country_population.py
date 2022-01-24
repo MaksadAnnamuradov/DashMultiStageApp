@@ -45,7 +45,6 @@ def update_graph(country_chosen):
     return fig
 
 
-# Dash version 1.16.0 or higher
 @app.callback(
     Output(component_id='country_pie_graph', component_property='figure'),
     Input(component_id='country_population_ln_graph', component_property='hoverData'),
