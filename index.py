@@ -7,7 +7,7 @@ from app import app
 from app import server
 
 # Connect to your app pages
-from apps import vgames, global_sales, animal_calls, country_population, uploading, data_share, datatable
+from apps import vgames, global_sales, animal_calls, country_population, uploading, data_share, datatable, recycling, choro_map
 
 
 app.layout = html.Div([
@@ -21,6 +21,8 @@ app.layout = html.Div([
         dcc.Link('Uploading Data| ', href='/apps/uploading'),
         dcc.Link('Sharing Data| ', href='/apps/data_share'),
         dcc.Link('Data Table| ', href='/apps/datatable'),
+        dcc.Link("Recycling|",  href='/apps/recycling'),
+         dcc.Link("choroMap",  href='/apps/choro_map'),
     ], className="row"),
     html.Div(id='page-content', children=[])
 ])
@@ -45,6 +47,10 @@ def display_page(pathname):
         return data_share.layout
     if pathname == '/apps/datatable':
         return datatable.layout
+    if pathname == '/apps/recycling':
+        return recycling.layout
+    if pathname == '/apps/choro_map':
+        return choro_map.layout
     else:
         return "404 Page Error! Please choose a link"
 
